@@ -29,7 +29,7 @@ function [J, grad] = linearRegCostFunction(X, y, theta, lambda)
   % grad(1) = (1/m)*sum((h_x-y).*X(:,1)); % scalar == 1x1
   grad(1) = (1/m)*(X(:,1)'*(h_x-y)); % scalar == 1x1
   grad(2:end) = (1/m)*(X(:,2:end)'*(h_x-y)) + (lambda/m)*theta(2:end); % n x 1
-  % =========================================================================
+  % ========================================================================
   
   grad = grad(:);
 
